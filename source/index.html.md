@@ -12,6 +12,7 @@ includes:
   - introduction
   - name
   - price
+  - category
 
 search: true
 ---
