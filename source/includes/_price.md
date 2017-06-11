@@ -21,7 +21,7 @@ mapPrice = (arrayOfSelectors) => {
 mapPrice(["Enter comma separated css selectors here"])
 
 //example
-mapPrice(["#priceCopy","#priceArea > span:nth-child(2)"])
+mapPrice(["#priceCopy","#priceArea > p.price"])
 
 "15.00"
 
@@ -35,4 +35,4 @@ and returns a single price string without any commas or currency symbols.
 
 Parameter | Default | Description
 --------- | ------- | -----------
-arrayOfSelectors | minimum of one selector | returns single price string.
+arrayOfSelectors | minimum of one CSS selector inside an array | a single or multiple css path(s) to an html element containing some text i.e. a <code>```<p class="price">```</code> element.

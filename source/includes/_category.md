@@ -32,7 +32,7 @@ and returns a comma separated string.
 
 Parameter | Default | Description
 --------- | ------- | -----------
-CSS Selector | minimum of one selector | returns a comma separated string.
+cssPath | exactly one CSS selector in string format | a css path to an html element containing text i.e. a category breadcrumb element
 
 
 ## mapMobileDesktopCategory()

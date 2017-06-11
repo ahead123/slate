@@ -17,7 +17,7 @@ mapName = (arrayOfSelectors) => {
 mapName(["Enter comma separated css selectors here"])
 
 //example
-mapName(["h1"])
+mapName(["h1#product-name"])
 
 "Blue Suede Shoes"
 
@@ -31,4 +31,4 @@ and returns a single name string.
 
 Parameter | Default | Description
 --------- | ------- | -----------
-arrayOfSelectors | minimum of one selector | returns single name string.
+arrayOfSelectors | minimum of one CSS selector inside an array | a single or multiple css path(s) to an html element containing some text i.e. an <code>```<h1 id="product-name">```</code> element.
