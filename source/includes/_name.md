@@ -26,6 +26,9 @@ mapName(["h1#product-name"])
 The mapName function expects an array of comma separated CSS selectors,
 and returns a single name string.
 
+> copy this code block to use in pixel dashboard
+
+> mapName = (arrayOfSelectors) => { let name = null; let aA=arrayOfSelectors; for(let i = 0; i < aA.length; i++){ if(document.querySelector(aA[i])){ name=document.querySelector(aA[i]).textContent.trim();} } return name }; mapName(["Enter comma separated css selectors here"])
 
 ### Parameters
 

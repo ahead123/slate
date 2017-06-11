@@ -13,6 +13,7 @@ includes:
   - name
   - price
   - category
+  - sku
 
 search: true
 ---
