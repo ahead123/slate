@@ -2,9 +2,6 @@
 title: API Reference
 
 language_tabs:
-  - shell
-  - ruby
-  - python
   - javascript
 
 toc_footers:
@@ -19,171 +16,81 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the SteelHouse Pixel Mapping Framework.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+Our mappings are all written in, the popular JavaScript language! You can view code examples in the dark area to the right!
 
-This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
-# Authentication
+# Name
 
-> To authorize, use this code:
+## mapName()
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
 
 ```javascript
-const kittn = require('kittn');
 
-let api = kittn.authorize('meowmeowmeow');
+mapName = (arrayOfSelectors) => { 
+  let name = null; let aA=arrayOfSelectors; 
+  for(let i = 0; i < aA.length; i++){
+    if(document.querySelector(aA[i])){
+      name=document.querySelector(aA[i]).textContent.trim();}
+    }
+  return name
+};
+
+mapName(["Enter comma separated css selectors here"])
+
+//example
+mapName(["h1"])
+
+"Blue Suede Shoes"
+
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+The mapName function expects an array of comma separated CSS selectors,
+and returns a single name string.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
-
-> The above command returns JSON structured like this:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
+### Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+arrayOfSelectors | minimum of one selector | returns single name string.
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
+# Price
 
-## Get a Specific Kitten
+## mapPrice()
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
 
 ```javascript
-const kittn = require('kittn');
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+mapPrice = (arrayOfSelectors) => {
+  let price=null; 
+  let aA=arrayOfSelectors; 
+  for(let i = 0; i < aA.length; i++){
+    if(document.querySelector(aA[i])){
+      price=document.querySelector(aA[i]).textContent.trim();
+      price=/[0-9,.]+/.exec(price)[0]; 
+      break;
+    }
+  }
+  return price
+};
+
+mapPrice(["Enter comma separated css selectors here"])
+
+//example
+mapPrice(["#priceCopy","#priceArea > span:nth-child(2)"])
+
+"15.00"
+
 ```
 
-> The above command returns JSON structured like this:
+The mapPrice function expects an array of comma separated CSS selectors,
+and returns a single price string without any commas or currency symbols.
 
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
 
-This endpoint retrieves a specific kitten.
+### Parameters
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
+Parameter | Default | Description
+--------- | ------- | -----------
+arrayOfSelectors | minimum of one selector | returns single price string.
