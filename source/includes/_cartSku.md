@@ -33,10 +33,11 @@ The SteelHouse(SH) tracking pixel also fires a SH Facebook(FB) pixel and a commo
 
 The mapCartSku funciton will remove all special characters and whitespace preventing this error from triggering in the SH FB pixel.
 
-> copy this code block to use in pixel dashboard
+> copy the code block below to use in pixel dashboard
 
-> mapCartSku = (cssPath) => { let cartSku = ""; let y = /[0-9a-zA-Z,]+/g; let aA = document.querySelectorAll(cssPath); for (let i = 0; i < aA.length; i++) { cartSku += "," + aA[i].textContent.trim() }; cartSku = cartSku.substring(1, cartSku.length); cartSku = cartSku.match(y).join("") return cartSku }; mapCartSku("Enter cart product skus cssPath")
-
+```javascript
+mapCartSku = (cssPath) => { let cartSku = ""; let y = /[0-9a-zA-Z,]+/g; let aA = document.querySelectorAll(cssPath); for (let i = 0; i < aA.length; i++) { cartSku += "," + aA[i].textContent.trim() }; cartSku = cartSku.substring(1, cartSku.length); cartSku = cartSku.match(y).join("") return cartSku }; mapCartSku("Enter cart product skus cssPath")
+```
 ### Parameters
 
 Parameter | Default | Description

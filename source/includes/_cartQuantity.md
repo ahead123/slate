@@ -28,10 +28,11 @@ shcq: "4"
 The mapCartQuantityFromIcon function expects an array of comma separated CSS selectors,
 and returns a single cart quantity string without any special characters.
 
-> copy this code block to use in pixel dashboard
+> copy the code block below to use in pixel dashboard
 
-> mapCartQuantityFromIcon = (arrayOfSelectors) => {let quant=null; let aA=arrayOfSelectors; for(let i = 0; i < aA.length; i++){if(document.querySelector(aA[i])){quant=document.querySelector(aA[i]).textContent.trim();}}return quant};mapCartQuantityFromIcon(["Enter comma separated","CSS selectors here"])
-
+```javascript
+mapCartQuantityFromIcon = (arrayOfSelectors) => {let quant=null; let aA=arrayOfSelectors; for(let i = 0; i < aA.length; i++){if(document.querySelector(aA[i])){quant=document.querySelector(aA[i]).textContent.trim();}}return quant};mapCartQuantityFromIcon(["Enter comma separated","CSS selectors here"])
+```
 
 ### Parameters
 

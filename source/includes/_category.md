@@ -86,7 +86,9 @@ The mapMobileDesktopCategory will return a comma separated category string appen
 
 > copy this code block to use in pixel dashboard
 
-> mapMobileDesktopCategory = (mobileUrlTerm=null, mobilePath=null, desktopPath=null) => { let cat = "", aA = null, isMobile = false, url = window.location.href, checkVersion=false; if(mobileUrlTerm){checkVersion=true} if(mobileUrlTerm && url.indexOf(mobileUrlTerm)>-1){ isMobile = true; aA=document.querySelectorAll(mobilePath) }else{ aA=document.querySelectorAll(desktopPath) } for (let i = 0; i < aA.length; i++) { cat += "," + aA[i].textContent.trim(); } cat = cat.substring(1, cat.length); if (isMobile) { cat = cat + ",MOBILE" } else if(checkVersion && !isMobile){ cat = cat + ",DESKTOP" } else { cat = cat } return cat } mapMobileDesktopCategory("Enter mobile term from url","Enter mobile CSS selector","Enter desktop CSS selector")
+```javascript
+mapMobileDesktopCategory = (mobileUrlTerm=null, mobilePath=null, desktopPath=null) => { let cat = "", aA = null, isMobile = false, url = window.location.href, checkVersion=false; if(mobileUrlTerm){checkVersion=true} if(mobileUrlTerm && url.indexOf(mobileUrlTerm)>-1){ isMobile = true; aA=document.querySelectorAll(mobilePath) }else{ aA=document.querySelectorAll(desktopPath) } for (let i = 0; i < aA.length; i++) { cat += "," + aA[i].textContent.trim(); } cat = cat.substring(1, cat.length); if (isMobile) { cat = cat + ",MOBILE" } else if(checkVersion && !isMobile){ cat = cat + ",DESKTOP" } else { cat = cat } return cat }; mapMobileDesktopCategory("Enter mobile term from url","Enter mobile CSS selector","Enter desktop CSS selector")
+```
 
 ### Parameters - should be entered in order 
 

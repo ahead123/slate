@@ -7,7 +7,7 @@ The documentation is setup with some explanation's on the left
 and code examples on the right. 
 
 Code can also be copied from the text editor on the right
-and used inside the SteelHouse Pixel Dashboard.
+and used inside the [SteelHouse Pixel Dashboard](https://pixel.dal05.steelhouse.com)
 
 ```javascript
 

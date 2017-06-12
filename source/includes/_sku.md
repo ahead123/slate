@@ -33,9 +33,11 @@ The SteelHouse(SH) tracking pixel also fires a SH Facebook(FB) pixel and a commo
 
 The mapSku funciton will remove all special characters and whitespace preventing this error from triggering in the SH FB pixel.
 
-> copy this code block to use in pixel dashboard
+> copy the code block below to use in pixel dashboard
 
-> mapSku = (arrayOfSelectors) => { let sku = null; let aA = arrayOfSelectors; let r = /[a-zA-Z0-9]+/g; for (let i = 0; i < aA.length; i++) { if (document.querySelector(aA[i])) { sku = document.querySelector(aA[i]).textContent.match(r).join("").trim(); } } return sku }; mapSku(["Enter comma separated css selectors here"])
+```javascript
+mapSku = (arrayOfSelectors) => { let sku = null; let aA = arrayOfSelectors; let r = /[a-zA-Z0-9]+/g; for (let i = 0; i < aA.length; i++) { if (document.querySelector(aA[i])) { sku = document.querySelector(aA[i]).textContent.match(r).join("").trim(); } } return sku }; mapSku(["Enter comma separated css selectors here"])
+```
 
 ### Parameters
 

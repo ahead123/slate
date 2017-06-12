@@ -29,10 +29,11 @@ shcv: "445.00"
 The mapCartValue function expects an array of comma separated CSS selectors, and a currency symbol.
 The mapCartValu function returns a single value string without any commas or currency symbols.
 
-> copy this code block to use in pixel dashboard
+> copy the code block below to use in pixel dashboard
 
-> mapCartValue = (arrayOfSelectors = [], currencySymbol = "$") => { let cartVal = null; let aA = arrayOfSelectors; for (let i = 0; i < aA.length; i++) { if (document.querySelector(aA[i])) { cartVal = document.querySelector(aA[i]).textContent.trim(); cartVal = cartVal.indexOf(currencySymbol) > -1 ? /[0-9,.]+/.exec(cartVal)[0] : null; } } return cartVal };mapCartValue(["Enter comma separated css selectors here"], "Enter currency - unless USD ")
-
+```javascript
+mapCartValue = (arrayOfSelectors = [], currencySymbol = "$") => { let cartVal = null; let aA = arrayOfSelectors; for (let i = 0; i < aA.length; i++) { if (document.querySelector(aA[i])) { cartVal = document.querySelector(aA[i]).textContent.trim(); cartVal = cartVal.indexOf(currencySymbol) > -1 ? /[0-9,.]+/.exec(cartVal)[0] : null; } } return cartVal };mapCartValue(["Enter comma separated css selectors here"], "Enter currency - unless USD ")
+```
 
 ### Parameters
 

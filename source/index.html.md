@@ -18,6 +18,7 @@ includes:
   - cartQuantity
   - cartValue
   - cartSku
+  - conversionVariable
 
 search: true
 ---
