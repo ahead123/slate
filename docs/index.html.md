@@ -14,6 +14,10 @@ includes:
   - price
   - category
   - sku
+  - image
+  - cartQuantity
+  - cartValue
+  - cartSku
 
 search: true
 ---
