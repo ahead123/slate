@@ -20,7 +20,7 @@ mapCategory("Enter CSS selector here").
 //example
 mapCategory("#crumb > span > a");
 
-"Home, Mens, Shoes, Running, Addidas"
+shpc: "Home, Mens, Shoes, Running, Addidas"
 
 ```
 
@@ -72,11 +72,11 @@ mapMobileDesktopCategory("mobile url term","mobile CSS path","desktop CSS path")
 //example
 mapMobileDesktopCategory("/mobile/","mobile > css > path", "desktop > css > path");
 
-"Home, Mens, Shoes, Running, Addidas, Desktop"
+shpc: "Home, Mens, Shoes, Running, Addidas, Desktop"
 
 //or
 
-"Home, Mens, Shoes, Running, Addidas, Mobile"
+shpc: "Home, Mens, Shoes, Running, Addidas, Mobile"
 
 ```
 

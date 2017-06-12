@@ -19,7 +19,7 @@ mapName(["Enter comma separated css selectors here"])
 //example
 mapName(["h1#product-name"])
 
-"Blue Suede Shoes"
+shpn: "Blue Suede Shoes"
 
 ```
 

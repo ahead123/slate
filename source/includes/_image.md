@@ -71,7 +71,7 @@ mapImageFromMeta = () => {
 mapImageFromMeta()
 
 //example
-mapImage()
+mapImageFromMeta()
 
 shpi: "https://goo.gl/HrwVyt"
 

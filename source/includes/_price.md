@@ -24,7 +24,7 @@ mapPrice(["Enter comma separated css selectors here"])
 //example
 mapPrice(["#priceCopy","#priceArea > p.price"])
 
-"15.00"
+shpp: "15.00"
 
 ```
 
@@ -67,7 +67,7 @@ mapLowestPriceFromMany("Enter CSS path")
 //example
 mapLowestPriceFromMany("#product-price > p > span.price")
 
-"115.00"
+shpp: "115.00"
 
 ```
 

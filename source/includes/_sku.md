@@ -22,7 +22,7 @@ mapSku(["Enter comma separated css selectors here"])
 //example
 mapSku(["span.product_id"])
 
-"1345YLU67TR5"
+shps: "1345YLU67TR5"
 
 ```
 
