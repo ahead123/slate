@@ -15,7 +15,7 @@ mapCategory = (cssPath) => {
   return cat
 };
 
-mapCategory("Enter CSS selector here")
+mapCategory("Enter CSS selector here").
 
 //example
 mapCategory("#crumb > span > a");
