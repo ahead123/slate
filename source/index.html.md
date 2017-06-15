@@ -5,8 +5,8 @@ language_tabs:
   - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href="http://pixel.dal05.steelhouse.com/">SteelHouse Pixel Dashboard</a>
+  - <a href='http://www.steelhouse.com'>Documentation Powered by SteelHouse</a>
 
 includes:
   - introduction
@@ -19,6 +19,7 @@ includes:
   - cartValue
   - cartSku
   - conversionVariable
+  - conversionBlock
 
 search: true
 ---
