@@ -1,4 +1,5 @@
-# Mapping Name - i.e. Category  
+# Template 
+- mapping name - i.e. Category
 
 ## function name -  i.e - mapCategory()
 
