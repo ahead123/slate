@@ -20,6 +20,7 @@ includes:
   - cartSku
   - conversionVariable
   - conversionBlock
+  - blankTemplate
 
 search: true
 ---
