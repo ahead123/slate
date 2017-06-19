@@ -29,7 +29,7 @@ shadditional: "sh_conversion=SHBLOCK"
 
 ```
 
-The findDuplicateConversions function expects and AID, and searches through the DOM for the SteelHouse conversion pixel containing the same AID. It will not block itself, however if it finds a duplicate instance of itself than one of the conversions will be blocked, so that only one conversion registers.
+The findDuplicateConversions function expects and AID, and searches through the DOM for the SteelHouse conversion pixel containing the same AID. It will not block itself if it only finds one instance of itself installed, however if it finds a duplicate instance of itself than one of the conversions will be blocked, so that only one conversion registers in the database.
 
 > copy the code block below to use in pixel dashboard
 
