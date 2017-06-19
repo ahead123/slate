@@ -1022,6 +1022,51 @@ The findConversionVariable will return the value of the variable in the SteelHou
 </tr>
 </tbody></table>
 
+          <h1 id="mapping-name-i-e-category">Mapping Name - i.e. Category</h1>
+
+<h2 id="function-name-i-e-mapcategory">function name -  i.e - mapCategory()</h2>
+<pre class="highlight javascript tab-javascript"><code><span class="c1">// Put your Javascript code between the 3 tick marks and reference the language </span>
+<span class="c1">// - i.e. javascript</span>
+
+
+<span class="c1">// Function Invoking Example - </span>
+<span class="nx">Provide</span> <span class="nx">an</span> <span class="nx">example</span> <span class="nx">of</span> <span class="nx">how</span> <span class="nx">the</span> <span class="kd">function</span> <span class="nx">would</span> <span class="nx">look</span> <span class="nx">invoked</span> <span class="kd">with</span> <span class="nx">selectors</span><span class="p">.</span>
+
+<span class="nx">i</span><span class="p">.</span><span class="nx">e</span> <span class="o">-</span> <span class="nx">mapCategory</span><span class="p">(</span><span class="s2">"#crumb &gt; span &gt; a"</span><span class="p">);</span>
+
+<span class="c1">// Provide an example of how the mapping should look in the pixel - </span>
+<span class="nx">i</span><span class="p">.</span><span class="nx">e</span> <span class="o">-</span> <span class="nx">shpc</span><span class="p">:</span> <span class="s2">"Home, Mens, Shoes, Running, Addidas"</span>
+
+</code></pre>
+<p>***** Please provide a detailed explanation about the mapping and what &ldquo;type&rdquo; it takes to function.</p>
+
+<p>i.e - The mapCategory function expects a CSS selector ( most commonly a breadcrumb ),
+and returns a comma separated string.</p>
+
+<blockquote>
+<p>Creates a bold block for reference 
+- i.e - Copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="s2">"Place the unspaced version of your code here"</span> <span class="o">-</span> 
+<span class="nx">i</span><span class="p">.</span><span class="nx">e</span> <span class="o">-</span> 
+<span class="nx">mapCategory</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">cat</span><span class="o">=</span><span class="s2">""</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span> <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="nx">cat</span><span class="o">+=</span><span class="s2">","</span><span class="o">+</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span> <span class="p">};</span> <span class="nx">cat</span><span class="o">=</span><span class="nx">cat</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">cat</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="k">return</span> <span class="nx">cat</span> <span class="p">};</span> <span class="nx">mapCategory</span><span class="p">(</span><span class="s2">"Enter CSS selector here"</span><span class="p">);</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cssPath</td>
+<td>Exactly one CSS selector in string format</td>
+<td>A css path to an html element containing text i.e. (a category breadcrumb element)</td>
+</tr>
+</tbody></table>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
