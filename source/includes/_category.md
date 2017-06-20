@@ -29,7 +29,9 @@ and returns a comma separated string.
 
 > copy this code block to use in pixel dashboard
 
-> mapCategory = (cssPath) => { let cat=""; let aA=document.querySelectorAll(cssPath); for(let i = 0; i < aA.length; i++){ cat+=","+aA[i].textContent.trim(); }; cat=cat.substring(1, cat.length); return cat }; mapCategory("Enter CSS selector here")
+```javascript
+mapCategory = (cssPath) => { let cat=""; let aA=document.querySelectorAll(cssPath); for(let i = 0; i < aA.length; i++){ cat+=","+aA[i].textContent.trim(); }; cat=cat.substring(1, cat.length); return cat }; mapCategory("Enter CSS selector here")
+```
 
 ### Parameters
 

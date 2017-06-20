@@ -19,6 +19,7 @@ includes:
   - cartValue
   - cartSku
   - conversionVariable
+  - template
 
 search: true
 ---
