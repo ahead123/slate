@@ -21,7 +21,6 @@ includes:
   - conversionVariable
   - conversionBlock
   - blankTemplate
-  - This is a tester 
 
 search: true
 ---
