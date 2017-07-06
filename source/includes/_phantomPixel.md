@@ -5,7 +5,7 @@
 
 ```javascript
 
-phantomPixel = (AID) => {
+firePhantom = (AID) => {
   sh_pixel = (AID) => {
       (function() {
           "use strict";
