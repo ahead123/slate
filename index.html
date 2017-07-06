@@ -1157,7 +1157,7 @@ The findConversionVariable will return the value of the variable in the SteelHou
       <span class="kd">var</span> <span class="nx">detect</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
           <span class="k">if</span> <span class="p">(</span><span class="nx">that</span><span class="p">.</span><span class="nx">oldHash</span> <span class="o">!=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span> <span class="p">{</span>
               <span class="nb">window</span><span class="p">.</span><span class="nx">newFlag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-              <span class="nx">sh_pixel</span><span class="p">();</span>
+              <span class="nx">sh_pixel</span><span class="p">(</span><span class="nx">AID</span><span class="p">);</span>
               <span class="nx">that</span><span class="p">.</span><span class="nx">oldHash</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">;</span>
           <span class="p">}</span>
       <span class="p">};</span>
