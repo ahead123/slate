@@ -56,7 +56,7 @@ phantomPixel = (AID) => {
       var detect = function() {
           if (that.oldHash != window.location.href) {
               window.newFlag = 1;
-              sh_pixel();
+              sh_pixel(AID);
               that.oldHash = window.location.href;
           }
       };
