@@ -1,0 +1,1082 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <img src="images/logo.svg" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li><a href="http://pixel.dal05.steelhouse.com/">SteelHouse Pixel Dashboard</a></li>
+            <li><a href='http://www.steelhouse.com'>Documentation Powered by SteelHouse</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        
+          <h1 id="introduction">Introduction</h1>
+
+<p>Welcome to the SteelHouse Pixel Mapping Framework.</p>
+
+<p>Our mappings are all written in, the popular JavaScript language! 
+The documentation is setup with some explanation&rsquo;s on the left
+and code examples on the right. </p>
+
+<p>Code can also be copied from the text editor on the right
+and used inside the <a href="http://pixel.dal05.steelhouse.com">SteelHouse Pixel Dashboard</a></p>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="c1">// example</span>
+<span class="nx">steelHouseMappings</span> <span class="o">=</span> <span class="p">(</span> <span class="nx">message</span> <span class="o">=</span> <span class="s2">"devOps"</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> 
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"We are the SteelHouse "</span><span class="o">+</span> <span class="nx">message</span> <span class="o">+</span> <span class="s2">" team!"</span> <span class="p">)</span>
+<span class="p">}</span>
+
+</code></pre>
+          <h1 id="name">Name</h1>
+
+<h2 id="mapname">mapName()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapName</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> 
+  <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span><span class="o">=</span><span class="nx">arrayOfSelectors</span><span class="p">;</span> 
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">])){</span>
+      <span class="nx">name</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();}</span>
+    <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">name</span>
+<span class="p">};</span>
+
+<span class="nx">mapName</span><span class="p">([</span><span class="s2">"Enter comma separated css selectors here"</span><span class="p">])</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapName</span><span class="p">([</span><span class="s2">"h1#product-name"</span><span class="p">])</span>
+
+<span class="na">shpn</span><span class="p">:</span> <span class="s2">"Blue Suede Shoes"</span>
+
+</code></pre>
+<p>The mapName function expects an array of comma separated CSS selectors,
+and returns a single name string.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapName</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span><span class="o">=</span><span class="nx">arrayOfSelectors</span><span class="p">;</span> <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="k">if</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">])){</span> <span class="nx">name</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();}</span> <span class="p">}</span> <span class="k">return</span> <span class="nx">name</span> <span class="p">};</span> <span class="nx">mapName</span><span class="p">([</span><span class="s2">"Enter comma separated css selectors here"</span><span class="p">])</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>arrayOfSelectors</td>
+<td>minimum of one CSS selector inside an array</td>
+<td>a single or multiple css path(s) to an html element containing some text i.e. an <code><code class="prettyprint">&lt;h1 id=&quot;product-name&quot;&gt;</code></code> element.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="price">Price</h1>
+
+<h2 id="mapprice">mapPrice()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapPrice</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">price</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span> 
+  <span class="kd">let</span> <span class="nx">aA</span><span class="o">=</span><span class="nx">arrayOfSelectors</span><span class="p">;</span> 
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">])){</span>
+      <span class="nx">price</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+      <span class="nx">price</span><span class="o">=</span><span class="sr">/</span><span class="se">[</span><span class="sr">0-9,.</span><span class="se">]</span><span class="sr">+/</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">price</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+      <span class="nx">price</span><span class="o">=</span><span class="nx">price</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">[</span><span class="sr">,</span><span class="se">]</span><span class="sr">/g</span><span class="p">,</span><span class="s2">""</span><span class="p">)</span> 
+      <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">price</span>
+<span class="p">};</span>
+
+<span class="nx">mapPrice</span><span class="p">([</span><span class="s2">"Enter comma separated css selectors here"</span><span class="p">])</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapPrice</span><span class="p">([</span><span class="s2">"#priceCopy"</span><span class="p">,</span><span class="s2">"#priceArea &gt; p.price"</span><span class="p">])</span>
+
+<span class="na">shpp</span><span class="p">:</span> <span class="s2">"15.00"</span>
+
+</code></pre>
+<p>The mapPrice function expects an array of comma separated CSS selectors,
+and returns a single price string without any commas or currency symbols.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code> <span class="nx">mapPrice</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">price</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span><span class="o">=</span><span class="nx">arrayOfSelectors</span><span class="p">;</span> <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="k">if</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">])){</span> <span class="nx">price</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span> <span class="nx">price</span><span class="o">=</span><span class="sr">/</span><span class="se">[</span><span class="sr">0-9,.</span><span class="se">]</span><span class="sr">+/</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">price</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span> <span class="k">break</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span> <span class="k">return</span> <span class="nx">price</span> <span class="p">};</span> <span class="nx">mapPrice</span><span class="p">([</span><span class="s2">"Enter comma separated css selectors here"</span><span class="p">])</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>arrayOfSelectors</td>
+<td>minimum of one CSS selector inside an array</td>
+<td>a single or multiple css path(s) to an html element containing some text i.e. a <code><code class="prettyprint">&lt;p class=&quot;price&quot;&gt;</code></code> element.</td>
+</tr>
+</tbody></table>
+
+<h2 id="maplowestpricefrommany">mapLowestPriceFromMany()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapLowestPriceFromMany</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">price</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">cprice</span> <span class="o">=</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">"$"</span><span class="p">,</span> <span class="s2">""</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">price</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">price</span> <span class="o">=</span> <span class="nx">cprice</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">price</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">cprice</span><span class="p">))</span> <span class="p">{</span>
+          <span class="nx">price</span> <span class="o">=</span> <span class="nx">cprice</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">};</span>
+  <span class="k">return</span> <span class="nx">price</span>
+<span class="p">};</span>
+
+<span class="nx">mapLowestPriceFromMany</span><span class="p">(</span><span class="s2">"Enter CSS path"</span><span class="p">)</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapLowestPriceFromMany</span><span class="p">(</span><span class="s2">"#product-price &gt; p &gt; span.price"</span><span class="p">)</span>
+
+<span class="na">shpp</span><span class="p">:</span> <span class="s2">"115.00"</span>
+
+</code></pre>
+<p>The mapLowestPriceFromMany function expects a CSS path,
+and runs a comparison algorithm to check for the lowest price among many prices. </p>
+
+<p>The mapLowestPriceFromMany function will return the lowest price as a string without
+any currency symbols or commas.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapLowestPriceFromMany</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">price</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="kd">let</span> <span class="nx">cprice</span> <span class="o">=</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">"$"</span><span class="p">,</span> <span class="s2">""</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span><span class="k">if</span> <span class="p">(</span><span class="nx">price</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span> <span class="nx">price</span> <span class="o">=</span> <span class="nx">cprice</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">price</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">cprice</span><span class="p">))</span> <span class="p">{</span> <span class="nx">price</span> <span class="o">=</span> <span class="nx">cprice</span><span class="p">;</span> <span class="p">}</span> <span class="p">};</span> <span class="k">return</span> <span class="nx">price</span> <span class="p">};</span> <span class="nx">mapLowestPriceFromMany</span><span class="p">(</span><span class="s2">"Enter cssPath"</span><span class="p">)</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cssPath</td>
+<td>minimum of one CSS path</td>
+<td>a single path to an html element containing some numeric price values i.e. <code><code class="prettyprint">&lt;span class=&quot;price&quot;&gt;</code></code> elements.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="category">Category</h1>
+
+<h2 id="mapcategory">mapCategory()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapCategory</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">cat</span><span class="o">=</span><span class="s2">""</span><span class="p">;</span> 
+  <span class="kd">let</span> <span class="nx">aA</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span> 
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span> 
+    <span class="nx">cat</span><span class="o">+=</span><span class="s2">","</span><span class="o">+</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span> 
+  <span class="p">};</span>
+  <span class="nx">cat</span><span class="o">=</span><span class="nx">cat</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">cat</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> 
+  <span class="k">return</span> <span class="nx">cat</span>
+<span class="p">};</span>
+
+<span class="nx">mapCategory</span><span class="p">(</span><span class="s2">"Enter CSS selector here"</span><span class="p">).</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapCategory</span><span class="p">(</span><span class="s2">"#crumb &gt; span &gt; a"</span><span class="p">);</span>
+
+<span class="nl">shpc</span><span class="p">:</span> <span class="s2">"Home, Mens, Shoes, Running, Addidas"</span>
+
+</code></pre>
+<p>The mapCategory function expects a CSS selector ( most commonly a breadcrumb ),
+and returns a comma separated string.</p>
+
+<blockquote>
+<p>copy this code block to use in pixel dashboard</p>
+
+<p>mapCategory = (cssPath) =&gt; { let cat=&ldquo;&rdquo;; let aA=document.querySelectorAll(cssPath); for(let i = 0; i &lt; aA.length; i++){ cat+=&ldquo;,&rdquo;+aA[i].textContent.trim(); }; cat=cat.substring(1, cat.length); return cat }; mapCategory(&ldquo;Enter CSS selector here&rdquo;)</p>
+</blockquote>
+
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cssPath</td>
+<td>exactly one CSS selector in string format</td>
+<td>a css path to an html element containing text i.e. a category breadcrumb element</td>
+</tr>
+</tbody></table>
+
+<h2 id="mapmobiledesktopcategory">mapMobileDesktopCategory()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapMobileDesktopCategory</span> <span class="o">=</span> <span class="p">(</span><span class="nx">mobileUrlTerm</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span> <span class="nx">mobilePath</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span> <span class="nx">desktopPath</span><span class="o">=</span><span class="kc">null</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+
+    <span class="kd">let</span> <span class="nx">cat</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="nx">aA</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">isMobile</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">url</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">,</span> <span class="nx">checkVersion</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">mobileUrlTerm</span><span class="p">){</span><span class="nx">checkVersion</span><span class="o">=</span><span class="kc">true</span><span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">mobileUrlTerm</span> <span class="o">&amp;&amp;</span> <span class="nx">url</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">mobileUrlTerm</span><span class="p">)</span><span class="o">&gt;-</span><span class="mi">1</span><span class="p">){</span>
+      <span class="nx">isMobile</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="nx">aA</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">mobilePath</span><span class="p">)</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="nx">aA</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">desktopPath</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">cat</span> <span class="o">+=</span> <span class="s2">","</span> <span class="o">+</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="nx">cat</span> <span class="o">=</span> <span class="nx">cat</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">cat</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isMobile</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">cat</span> <span class="o">=</span> <span class="nx">cat</span> <span class="o">+</span> <span class="s2">",MOBILE"</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">checkVersion</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">isMobile</span><span class="p">){</span>
+        <span class="nx">cat</span> <span class="o">=</span> <span class="nx">cat</span> <span class="o">+</span> <span class="s2">",DESKTOP"</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">cat</span> <span class="o">=</span> <span class="nx">cat</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">cat</span>
+<span class="p">}</span>
+
+<span class="nx">mapMobileDesktopCategory</span><span class="p">(</span><span class="s2">"mobile url term"</span><span class="p">,</span><span class="s2">"mobile CSS path"</span><span class="p">,</span><span class="s2">"desktop CSS path"</span><span class="p">)</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapMobileDesktopCategory</span><span class="p">(</span><span class="s2">"/mobile/"</span><span class="p">,</span><span class="s2">"mobile &gt; css &gt; path"</span><span class="p">,</span> <span class="s2">"desktop &gt; css &gt; path"</span><span class="p">);</span>
+
+<span class="nl">shpc</span><span class="p">:</span> <span class="s2">"Home, Mens, Shoes, Running, Addidas, Desktop"</span>
+
+<span class="c1">//or</span>
+
+<span class="na">shpc</span><span class="p">:</span> <span class="s2">"Home, Mens, Shoes, Running, Addidas, Mobile"</span>
+
+</code></pre>
+<p>The mapMobileDesktopCategory function should be used when a site has both a desktop URL and mobile URL.</p>
+
+<p>The mapMobileDesktopCategory will return a comma separated category string appended with either &ldquo;,MOBILE&rdquo; or &ldquo;,DESKTOP&rdquo;.</p>
+
+<blockquote>
+<p>copy this code block to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapMobileDesktopCategory</span> <span class="o">=</span> <span class="p">(</span><span class="nx">mobileUrlTerm</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span> <span class="nx">mobilePath</span><span class="o">=</span><span class="kc">null</span><span class="p">,</span> <span class="nx">desktopPath</span><span class="o">=</span><span class="kc">null</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">cat</span> <span class="o">=</span> <span class="s2">""</span><span class="p">,</span> <span class="nx">aA</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">isMobile</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">url</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">,</span> <span class="nx">checkVersion</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="nx">mobileUrlTerm</span><span class="p">){</span><span class="nx">checkVersion</span><span class="o">=</span><span class="kc">true</span><span class="p">}</span> <span class="k">if</span><span class="p">(</span><span class="nx">mobileUrlTerm</span> <span class="o">&amp;&amp;</span> <span class="nx">url</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">mobileUrlTerm</span><span class="p">)</span><span class="o">&gt;-</span><span class="mi">1</span><span class="p">){</span> <span class="nx">isMobile</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="nx">aA</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">mobilePath</span><span class="p">)</span> <span class="p">}</span><span class="k">else</span><span class="p">{</span> <span class="nx">aA</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">desktopPath</span><span class="p">)</span> <span class="p">}</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="nx">cat</span> <span class="o">+=</span> <span class="s2">","</span> <span class="o">+</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span> <span class="p">}</span> <span class="nx">cat</span> <span class="o">=</span> <span class="nx">cat</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">cat</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="k">if</span> <span class="p">(</span><span class="nx">isMobile</span><span class="p">)</span> <span class="p">{</span> <span class="nx">cat</span> <span class="o">=</span> <span class="nx">cat</span> <span class="o">+</span> <span class="s2">",MOBILE"</span> <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">checkVersion</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">isMobile</span><span class="p">){</span> <span class="nx">cat</span> <span class="o">=</span> <span class="nx">cat</span> <span class="o">+</span> <span class="s2">",DESKTOP"</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="nx">cat</span> <span class="o">=</span> <span class="nx">cat</span> <span class="p">}</span> <span class="k">return</span> <span class="nx">cat</span> <span class="p">};</span> <span class="nx">mapMobileDesktopCategory</span><span class="p">(</span><span class="s2">"Enter mobile term from url"</span><span class="p">,</span><span class="s2">"Enter mobile CSS selector"</span><span class="p">,</span><span class="s2">"Enter desktop CSS selector"</span><span class="p">)</span>
+</code></pre>
+<h3 id="parameters-should-be-entered-in-order">Parameters - should be entered in order</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mobileUrlTerm</td>
+<td>null</td>
+<td>url identifier to identify the mobile site - i.e. &ldquo;/mobile/&rdquo;</td>
+</tr>
+<tr>
+<td>mobilePath</td>
+<td>null</td>
+<td>css selector path from the mobile site</td>
+</tr>
+<tr>
+<td>desktopPath</td>
+<td>required - desktop css path</td>
+<td>css selector path from the desktop site</td>
+</tr>
+</tbody></table>
+
+          <h1 id="sku">Sku</h1>
+
+<h2 id="mapsku">mapSku()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapSku</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">sku</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nx">arrayOfSelectors</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">r</span> <span class="o">=</span> <span class="sr">/</span><span class="se">[</span><span class="sr">a-zA-Z0-9</span><span class="se">]</span><span class="sr">+/g</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="nx">sku</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">r</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">""</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">sku</span>
+<span class="p">};</span>
+
+<span class="nx">mapSku</span><span class="p">([</span><span class="s2">"Enter comma separated css selectors here"</span><span class="p">])</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapSku</span><span class="p">([</span><span class="s2">"span.product_id"</span><span class="p">])</span>
+
+<span class="na">shps</span><span class="p">:</span> <span class="s2">"1345YLU67TR5"</span>
+
+</code></pre>
+<p>The mapSku function expects an array of comma separated CSS selectors,
+and returns a single sku value string.</p>
+
+<p>The SteelHouse(SH) tracking pixel also fires a SH Facebook(FB) pixel and a common issue that occurs is special characters in the sku mapping are not properly escaped which cause syntax errors to fire in the SH FB pixel.</p>
+
+<p>The mapSku funciton will remove all special characters and whitespace preventing this error from triggering in the SH FB pixel.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapSku</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">sku</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nx">arrayOfSelectors</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">r</span> <span class="o">=</span> <span class="sr">/</span><span class="se">[</span><span class="sr">a-zA-Z0-9</span><span class="se">]</span><span class="sr">+/g</span><span class="p">;</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span> <span class="nx">sku</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">r</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">""</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span> <span class="p">}</span> <span class="p">}</span> <span class="k">return</span> <span class="nx">sku</span> <span class="p">};</span> <span class="nx">mapSku</span><span class="p">([</span><span class="s2">"Enter comma separated css selectors here"</span><span class="p">])</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>arrayOfSelectors</td>
+<td>minimum of one CSS selector inside an array</td>
+<td>a single or multiple css path(s) to an html element containing some sku vlaue i.e. a <code><code class="prettyprint">&lt;span class=&quot;product_id&quot;&gt;</code></code> element.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="image">Image</h1>
+
+<h2 id="mapimage">mapImage()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapImage</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">image</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nx">arrayOfSelectors</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span>
+          <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">src</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">image</span>
+<span class="p">};</span>
+
+<span class="nx">mapImage</span><span class="p">([</span><span class="s2">"Enter comma separated css selectors here"</span><span class="p">])</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapImage</span><span class="p">([</span><span class="s2">"#productImage"</span><span class="p">,</span><span class="s2">"#main &gt; div.main-image"</span><span class="p">])</span>
+
+<span class="na">shpi</span><span class="p">:</span> <span class="s2">"https://goo.gl/HrwVyt"</span>
+
+</code></pre>
+<p>The mapImage function expects an array of comma separated CSS selectors,
+and returns a single image URL string.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapImage</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">image</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nx">arrayOfSelectors</span><span class="p">;</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span> <span class="nx">image</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">src</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span> <span class="k">return</span> <span class="nx">image</span> <span class="p">};</span> <span class="nx">mapImage</span><span class="p">([</span><span class="s2">"Enter CSS Selectors"</span><span class="p">])</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>arrayOfSelectors</td>
+<td>minimum of one CSS selector inside an array</td>
+<td>single or multiple css path(s) to an html element containing an image source i.e. an <code><code class="prettyprint">&lt;img id=&quot;productImage&quot; src=&quot;imageUrl&quot; /&gt;</code></code> element.</td>
+</tr>
+</tbody></table>
+
+<h2 id="mapimagefrommeta">mapImageFromMeta()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapImageFromMeta</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">image</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">isProductPage</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">"meta"</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"property"</span><span class="p">))</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"property"</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"og:type"</span> <span class="o">&amp;&amp;</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"content"</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"product"</span><span class="p">)</span> <span class="p">{</span>
+              <span class="nx">isProductPage</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isProductPage</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"property"</span><span class="p">))</span> <span class="p">{</span>
+              <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"property"</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"og:image"</span><span class="p">)</span> <span class="p">{</span>
+                  <span class="nx">image</span> <span class="o">=</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"content"</span><span class="p">);</span>
+                  <span class="k">break</span><span class="p">;</span>
+              <span class="p">}</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">image</span>
+<span class="p">};</span>
+
+<span class="nx">mapImageFromMeta</span><span class="p">()</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapImageFromMeta</span><span class="p">()</span>
+
+<span class="na">shpi</span><span class="p">:</span> <span class="s2">"https://goo.gl/HrwVyt"</span>
+
+</code></pre>
+<p>The mapImageFromMeta function defaults to checking the meta tags in the html head.
+The mapImageFromMeta function checks to ensure the page is a product page, and then
+pulls image from the meta tag with the value &ldquo;og:image&rdquo;.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapImageFromMeta</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">image</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">isProductPage</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">"meta"</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"property"</span><span class="p">))</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"property"</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"og:type"</span> <span class="o">&amp;&amp;</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"content"</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"product"</span><span class="p">)</span> <span class="p">{</span> <span class="nx">isProductPage</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span> <span class="k">if</span> <span class="p">(</span><span class="nx">isProductPage</span><span class="p">)</span> <span class="p">{</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"property"</span><span class="p">))</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"property"</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"og:image"</span><span class="p">)</span> <span class="p">{</span> <span class="nx">image</span> <span class="o">=</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">x</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"content"</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span> <span class="k">return</span> <span class="nx">image</span> <span class="p">};</span> <span class="nx">mapImageFromMeta</span><span class="p">()</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>none</td>
+<td>meta</td>
+<td>defaulted to use the meta tag with og:image i.e. <code><code class="prettyprint">&lt;meta property=&quot;og:image&quot; content=&quot;imageUrl&quot; /&gt;</code></code> element.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="cart-quantity">Cart Quantity</h1>
+
+<h2 id="mapcartquantityfromicon">mapCartQuantityFromIcon()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapCartQuantityFromIcon</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">quant</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nx">arrayOfSelectors</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span>
+        <span class="nx">quant</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">quant</span>
+<span class="p">};</span>
+
+<span class="nx">mapCartQuantityFromIcon</span><span class="p">([</span><span class="s2">"Enter comma separated css selectors here"</span><span class="p">])</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapCartQuantityFromIcon</span><span class="p">([</span><span class="s2">"#minibaskettext"</span><span class="p">,</span><span class="s2">"#span.cart-icon"</span><span class="p">])</span>
+
+<span class="na">shcq</span><span class="p">:</span> <span class="s2">"4"</span>
+
+</code></pre>
+<p>The mapCartQuantityFromIcon function expects an array of comma separated CSS selectors,
+and returns a single cart quantity string without any special characters.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapCartQuantityFromIcon</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="kd">let</span> <span class="nx">quant</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span><span class="o">=</span><span class="nx">arrayOfSelectors</span><span class="p">;</span> <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">])){</span><span class="nx">quant</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();}}</span><span class="k">return</span> <span class="nx">quant</span><span class="p">};</span><span class="nx">mapCartQuantityFromIcon</span><span class="p">([</span><span class="s2">"Enter comma separated"</span><span class="p">,</span><span class="s2">"CSS selectors here"</span><span class="p">])</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>arrayOfSelectors</td>
+<td>minimum of one CSS selector inside an array</td>
+<td>single or multiple css path(s) to an html element containing some text i.e. a <code><code class="prettyprint">&lt;span class=&quot;cart-icon&quot;&gt;</code></code> element.</td>
+</tr>
+</tbody></table>
+
+<h2 id="mapcartquantityfromcartpage">mapCartQuantityFromCartPage()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapCartQuantityFromCartPage</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">,</span> <span class="nx">elementType</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">quant</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">elementType</span><span class="o">==</span><span class="s2">"input"</span><span class="p">){</span>
+        <span class="nx">quant</span><span class="o">+=</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span><span class="p">)</span>
+      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="nx">quant</span> <span class="o">+=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">)</span>
+      <span class="p">}</span>      
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="nx">quant</span>
+<span class="p">};</span>
+
+<span class="nx">mapCartQuantityFromCartPage</span><span class="p">(</span><span class="s2">"Enter css path"</span><span class="p">,</span><span class="s2">"Enter element type"</span><span class="p">)</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapCartQuantityFromCartPage</span><span class="p">(</span><span class="s2">"div &gt; span &gt; input"</span><span class="p">,</span><span class="s2">"input"</span><span class="p">)</span>
+
+<span class="na">shcq</span><span class="p">:</span> <span class="s2">"2"</span>
+
+</code></pre>
+<p>The mapCartQuantityFromCartPage function expects a CSS path,
+and a type reference of the element holding the quantity value. 
+The mapCartQuantityFromCartPage function returns a single cart quantity string value.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapCartQuantityFromCartPage</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">,</span> <span class="nx">elementType</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">quant</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="nx">elementType</span><span class="o">==</span><span class="s2">"input"</span><span class="p">){</span> <span class="nx">quant</span><span class="o">+=</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span><span class="p">)</span> <span class="p">}</span><span class="k">else</span><span class="p">{</span> <span class="nx">quant</span> <span class="o">+=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">)</span> <span class="p">}</span> <span class="p">};</span> <span class="k">return</span> <span class="nx">quant</span> <span class="p">};</span> <span class="nx">mapCartQuantityFromCartPage</span><span class="p">(</span><span class="s2">"Enter CSS path"</span><span class="p">,</span><span class="s2">"Enter Element Type or leave as empty string"</span><span class="p">)</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cssPath</td>
+<td>one CSS path</td>
+<td>single css path(s) to an html element containing some cart quantity value i.e. an <code><code class="prettyprint">&lt;input value=&quot;4&quot;&gt;</code></code> element.</td>
+</tr>
+<tr>
+<td>elementType</td>
+<td>none</td>
+<td>the type of element holding the value. i.e. &ldquo;input&rdquo;</td>
+</tr>
+</tbody></table>
+
+<h2 id="mapcartquantityfrominputvalue">mapCartQuantityFromInputValue()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapCartQuantityFromInputValue</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">quant</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">quant</span> <span class="o">+=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">quant</span>
+<span class="p">};</span>
+
+<span class="nx">mapCartQuantityFromInputValue</span><span class="p">(</span><span class="s2">"Enter css path"</span><span class="p">)</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapCartQuantityFromInputValue</span><span class="p">(</span><span class="s2">"form &gt; table &gt; tbody &gt; tr &gt; td:nth-child(3) &gt; span &gt; input"</span><span class="p">)</span>
+
+<span class="nl">shcq</span><span class="p">:</span> <span class="s2">"2"</span>
+
+</code></pre>
+<p>The mapCartQuantityFromInputValue function expects a CSS path.
+The mapCartQuantityFromInputValue function returns a single cart quantity string value.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapCartQuantityFromInputValue</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="kd">let</span> <span class="nx">quant</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span> <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span><span class="nx">quant</span><span class="o">+=</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">value</span><span class="p">)}</span><span class="k">return</span> <span class="nx">quant</span><span class="p">};</span><span class="nx">mapCartQuantityFromInputValue</span><span class="p">(</span><span class="s2">"Enter CSS Path"</span><span class="p">)</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cssPath</td>
+<td>one CSS path</td>
+<td>single css path(s) to an html element containing some cart quantity value i.e. an <code><code class="prettyprint">&lt;input value=&quot;4&quot;&gt;</code></code> element.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="cart-value">Cart Value</h1>
+
+<h2 id="mapcartvalue">mapCartValue()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapCartValue</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span> <span class="o">=</span> <span class="p">[],</span> <span class="nx">currencySymbol</span> <span class="o">=</span> <span class="s2">"$"</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">cartVal</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nx">arrayOfSelectors</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span>
+          <span class="nx">cartVal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+          <span class="nx">cartVal</span> <span class="o">=</span> <span class="nx">cartVal</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">currencySymbol</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="p">?</span> <span class="sr">/</span><span class="se">[</span><span class="sr">0-9,.</span><span class="se">]</span><span class="sr">+/</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">cartVal</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span> <span class="kc">null</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">cartVal</span>
+<span class="p">};</span>
+
+<span class="nx">mapCartValue</span><span class="p">([</span><span class="s2">"Enter comma separated css selectors here"</span><span class="p">],</span> <span class="s2">"Enter currency - unless USD "</span><span class="p">)</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapCartValue</span><span class="p">([</span><span class="s2">"div.basketrow &gt; div.total_cell"</span><span class="p">,</span> <span class="s2">"table.order-summary &gt; tr.subtotal"</span><span class="p">],</span> <span class="s2">"$"</span><span class="p">)</span>
+
+<span class="na">shcv</span><span class="p">:</span> <span class="s2">"445.00"</span>
+
+</code></pre>
+<p>The mapCartValue function expects an array of comma separated CSS selectors, and a currency symbol.
+The mapCartValu function returns a single value string without any commas or currency symbols.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapCartValue</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arrayOfSelectors</span> <span class="o">=</span> <span class="p">[],</span> <span class="nx">currencySymbol</span> <span class="o">=</span> <span class="s2">"$"</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">cartVal</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nx">arrayOfSelectors</span><span class="p">;</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span> <span class="nx">cartVal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">]).</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span> <span class="nx">cartVal</span> <span class="o">=</span> <span class="nx">cartVal</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">currencySymbol</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="p">?</span> <span class="sr">/</span><span class="se">[</span><span class="sr">0-9,.</span><span class="se">]</span><span class="sr">+/</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">cartVal</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span> <span class="kc">null</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span> <span class="k">return</span> <span class="nx">cartVal</span> <span class="p">};</span><span class="nx">mapCartValue</span><span class="p">([</span><span class="s2">"Enter comma separated css selectors here"</span><span class="p">],</span> <span class="s2">"Enter currency - unless USD "</span><span class="p">)</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>arrayOfSelectors</td>
+<td>minimum of one CSS selector inside an array</td>
+<td>single or multiple css path(s) to an html element containing some text i.e. a <code><code class="prettyprint">&lt;p class=&quot;subtotal&quot;&gt;</code></code> element.</td>
+</tr>
+<tr>
+<td>currencySymbol</td>
+<td>$ - USD</td>
+<td>the currency symbol to check for to be removed</td>
+</tr>
+</tbody></table>
+
+          <h1 id="cart-sku">Cart Sku</h1>
+
+<h2 id="mapcartsku">mapCartSku()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">mapCartSku</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">cartSku</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="sr">/</span><span class="se">[</span><span class="sr">0-9a-zA-Z,</span><span class="se">]</span><span class="sr">+/g</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">cartSku</span> <span class="o">+=</span> <span class="s2">","</span> <span class="o">+</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">()</span>
+  <span class="p">};</span>
+  <span class="nx">cartSku</span> <span class="o">=</span> <span class="nx">cartSku</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">cartSku</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+  <span class="nx">cartSku</span> <span class="o">=</span> <span class="nx">cartSku</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">y</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+  <span class="k">return</span> <span class="nx">cartSku</span>
+<span class="p">};</span>
+
+<span class="nx">mapCartSku</span><span class="p">(</span><span class="s2">"Enter cart product skus cssPath"</span><span class="p">)</span>
+
+<span class="c1">//example</span>
+<span class="nx">mapCartSku</span><span class="p">(</span><span class="s2">"table &gt; tr &gt; span &gt; a.cart-product-id"</span><span class="p">);</span>
+
+<span class="nl">shcp</span><span class="p">:</span> <span class="s2">"greenshoes,blueshoes,proteinpowder,horweenbelt"</span>
+
+</code></pre>
+<p>The mapCartSku function expects a cssPath common to the cart skus
+The mapCartSku function returns a comma separated string of cart skus.</p>
+
+<p>The SteelHouse(SH) tracking pixel also fires a SH Facebook(FB) pixel and a common issue that occurs is special characters in the sku mapping are not properly escaped which cause syntax errors to fire in the SH FB pixel.</p>
+
+<p>The mapCartSku funciton will remove all special characters and whitespace preventing this error from triggering in the SH FB pixel.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">mapCartSku</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">cartSku</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="sr">/</span><span class="se">[</span><span class="sr">0-9a-zA-Z,</span><span class="se">]</span><span class="sr">+/g</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="nx">cartSku</span> <span class="o">+=</span> <span class="s2">","</span> <span class="o">+</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">()</span> <span class="p">};</span> <span class="nx">cartSku</span> <span class="o">=</span> <span class="nx">cartSku</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">cartSku</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="nx">cartSku</span> <span class="o">=</span> <span class="nx">cartSku</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">y</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span> <span class="k">return</span> <span class="nx">cartSku</span> <span class="p">};</span> <span class="nx">mapCartSku</span><span class="p">(</span><span class="s2">"Enter cart product skus cssPath"</span><span class="p">)</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cssPath</td>
+<td>one css path</td>
+<td>single css path(s) to an html elements on cart page, containing some sku vlaue i.e. a <code><code class="prettyprint">&lt;tr class=&quot;product_id&quot;&gt;</code></code> element.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="conversion-variable-search">Conversion Variable Search</h1>
+
+<h2 id="findconversionvariable">findConversionVariable()</h2>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">findConversionVariable</span> <span class="o">=</span> <span class="p">(</span><span class="nx">variableToCheckFor</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">"script"</span><span class="p">),</span>
+      <span class="nx">check</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="nx">valueToReturn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"src"</span><span class="p">))</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"src"</span><span class="p">).</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">"dx.steelhousemedia.com/spx?conv=1"</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+              <span class="nx">check</span> <span class="o">=</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"src"</span><span class="p">);</span>
+              <span class="k">break</span><span class="p">;</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">check</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">valueToReturn</span> <span class="o">=</span> <span class="nx">check</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">variableToCheckFor</span> <span class="o">+</span> <span class="s2">"="</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">"&amp;"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">valueToReturn</span>
+<span class="p">}</span>
+
+<span class="nx">findConversionVariable</span><span class="p">(</span><span class="s2">"Enter conversion variable here"</span><span class="p">)</span>
+
+<span class="c1">//example</span>
+<span class="nx">findConversionVariable</span><span class="p">(</span><span class="s2">"shopid"</span><span class="p">)</span>
+
+<span class="s2">"PRODUCT IDs"</span>
+
+</code></pre>
+<p>The findConversionVariable function expects a string identifier of a variable in the SteelHouse converison pixel.
+The findConversionVariable will return the value of the variable in the SteelHouse conversion pixel.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">findConversionVariable</span> <span class="o">=</span> <span class="p">(</span><span class="nx">variableToCheckFor</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">"script"</span><span class="p">),</span> <span class="nx">check</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">valueToReturn</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="k">if</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"src"</span><span class="p">)){</span> <span class="k">if</span><span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"src"</span><span class="p">).</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">"dx.steelhousemedia.com/spx?conv=1"</span><span class="p">)</span><span class="o">&gt;-</span><span class="mi">1</span><span class="p">){</span> <span class="nx">check</span> <span class="o">=</span> <span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"src"</span><span class="p">);</span> <span class="k">break</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span> <span class="k">if</span><span class="p">(</span><span class="nx">check</span><span class="p">){</span> <span class="nx">valueToReturn</span><span class="o">=</span><span class="nx">check</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">variableToCheckFor</span><span class="o">+</span><span class="s2">"="</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s2">"&amp;"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="p">};</span> <span class="k">return</span> <span class="nx">valueToReturn</span> <span class="p">};</span><span class="nx">findConversionVariable</span><span class="p">(</span><span class="s2">"shopid"</span><span class="p">)</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>variableToCheckFor</td>
+<td>minimum of 1 variable to check for</td>
+<td>a single variable found in the conversion pixel, such as &ldquo;shoamt&rdquo;, &ldquo;shopid&rdquo;, or &ldquo;shoid&rdquo;, etc&hellip;</td>
+</tr>
+</tbody></table>
+
+          <h1 id="conversion-duplicate-block">Conversion Duplicate Block</h1>
+
+<h2 id="findduplicateconversions">findDuplicateConversions()</h2>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">findDuplicateConversions</span> <span class="o">=</span> <span class="p">(</span><span class="nx">AID</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">block</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">check</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">"script"</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"src"</span><span class="p">))</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"src"</span><span class="p">).</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">"st?fdx=1&amp;conv=1&amp;shaid="</span> <span class="o">+</span> <span class="nx">AID</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+              <span class="nx">check</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+              <span class="k">break</span><span class="p">;</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">};</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">check</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">block</span> <span class="o">=</span> <span class="s2">"sh_conversion=SHBLOCK"</span>
+  <span class="p">};</span>
+  <span class="k">return</span> <span class="nx">block</span>
+<span class="p">};</span>
+<span class="nx">findDuplicateConversions</span><span class="p">(</span><span class="s2">"ENTER AID HERE"</span><span class="p">);</span>
+
+
+<span class="c1">//example</span>
+<span class="nx">findDuplicateConversions</span><span class="p">(</span><span class="s2">"10392"</span><span class="p">)</span>
+
+<span class="na">shadditional</span><span class="p">:</span> <span class="s2">"sh_conversion=SHBLOCK"</span>
+
+</code></pre>
+<p>The findDuplicateConversions function expects and AID, and searches through the DOM for the SteelHouse conversion pixel containing the same AID. It will not block itself if it only finds one instance of itself installed, however if it finds a duplicate instance of itself than one of the conversions will be blocked, so that only one conversion registers in the database.</p>
+
+<blockquote>
+<p>copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">findDuplicateConversions</span> <span class="o">=</span> <span class="p">(</span><span class="nx">AID</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">block</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">check</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">aA</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">"script"</span><span class="p">);</span> <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"src"</span><span class="p">))</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">"src"</span><span class="p">).</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">"st?fdx=1&amp;conv=1&amp;shaid="</span> <span class="o">+</span> <span class="nx">AID</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="nx">check</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">};</span> <span class="k">if</span> <span class="p">(</span><span class="nx">check</span><span class="p">)</span> <span class="p">{</span> <span class="nx">block</span> <span class="o">=</span> <span class="s2">"sh_conversion=SHBLOCK"</span> <span class="p">};</span> <span class="k">return</span> <span class="nx">block</span> <span class="p">};</span> <span class="nx">findDuplicateConversions</span><span class="p">(</span><span class="s2">"ENTER AID HERE"</span><span class="p">);</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>AID</td>
+<td>minimum of one AID</td>
+<td>a single AID entered as a string value</td>
+</tr>
+</tbody></table>
+
+          <h1 id="template">Template</h1>
+
+<ul>
+<li>mapping name - i.e. Category</li>
+</ul>
+
+<h2 id="function-name-i-e-mapcategory">function name -  i.e - mapCategory()</h2>
+<pre class="highlight javascript tab-javascript"><code><span class="c1">// Put your Javascript code between the 3 tick marks and reference the language </span>
+<span class="c1">// - i.e. javascript</span>
+
+
+<span class="c1">// Function Invoking Example - </span>
+<span class="nx">Provide</span> <span class="nx">an</span> <span class="nx">example</span> <span class="nx">of</span> <span class="nx">how</span> <span class="nx">the</span> <span class="kd">function</span> <span class="nx">would</span> <span class="nx">look</span> <span class="nx">invoked</span> <span class="kd">with</span> <span class="nx">selectors</span><span class="p">.</span>
+
+<span class="nx">i</span><span class="p">.</span><span class="nx">e</span> <span class="o">-</span> <span class="nx">mapCategory</span><span class="p">(</span><span class="s2">"#crumb &gt; span &gt; a"</span><span class="p">);</span>
+
+<span class="c1">// Provide an example of how the mapping should look in the pixel - </span>
+<span class="nx">i</span><span class="p">.</span><span class="nx">e</span> <span class="o">-</span> <span class="nx">shpc</span><span class="p">:</span> <span class="s2">"Home, Mens, Shoes, Running, Addidas"</span>
+
+</code></pre>
+<p>***** Please provide a detailed explanation about the mapping and what &ldquo;type&rdquo; it takes to function.</p>
+
+<p>i.e - The mapCategory function expects a CSS selector ( most commonly a breadcrumb ),
+and returns a comma separated string.</p>
+
+<blockquote>
+<p>Creates a bold block for reference 
+- i.e - Copy the code block below to use in pixel dashboard</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="s2">"Place the unspaced version of your code here"</span> <span class="o">-</span> 
+<span class="nx">i</span><span class="p">.</span><span class="nx">e</span> <span class="o">-</span> 
+<span class="nx">mapCategory</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cssPath</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kd">let</span> <span class="nx">cat</span><span class="o">=</span><span class="s2">""</span><span class="p">;</span> <span class="kd">let</span> <span class="nx">aA</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="nx">cssPath</span><span class="p">);</span> <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aA</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span> <span class="nx">cat</span><span class="o">+=</span><span class="s2">","</span><span class="o">+</span><span class="nx">aA</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">textContent</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span> <span class="p">};</span> <span class="nx">cat</span><span class="o">=</span><span class="nx">cat</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">cat</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="k">return</span> <span class="nx">cat</span> <span class="p">};</span> <span class="nx">mapCategory</span><span class="p">(</span><span class="s2">"Enter CSS selector here"</span><span class="p">);</span>
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>cssPath</td>
+<td>Exactly one CSS selector in string format</td>
+<td>A css path to an html element containing text i.e. (a category breadcrumb element)</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
