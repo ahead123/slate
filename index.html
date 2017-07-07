@@ -1150,7 +1150,7 @@ The findConversionVariable will return the value of the variable in the SteelHou
       <span class="p">})()</span>
   <span class="p">};</span>
 
- <span class="kd">function</span> <span class="nx">hashHandler</span><span class="p">()</span> <span class="p">{</span>
+ <span class="kd">function</span> <span class="nx">hashHandler</span><span class="p">(</span><span class="nx">AID</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">oldHash</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">;</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">Check</span><span class="p">;</span>
       <span class="kd">var</span> <span class="nx">that</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
@@ -1164,7 +1164,7 @@ The findConversionVariable will return the value of the variable in the SteelHou
       <span class="k">this</span><span class="p">.</span><span class="nx">Check</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">detect</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
   <span class="p">};</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">flag</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kd">var</span> <span class="nx">hashDetection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">hashHandler</span><span class="p">();</span>
+      <span class="kd">var</span> <span class="nx">hashDetection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">hashHandler</span><span class="p">(</span><span class="nx">AID</span><span class="p">);</span>
   <span class="p">};</span>
 <span class="p">}</span>
 
