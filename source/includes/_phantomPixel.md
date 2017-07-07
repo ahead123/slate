@@ -49,7 +49,7 @@ firePhantom = (AID) => {
       })()
   };
 
- function hashHandler() {
+ function hashHandler(AID) {
       this.oldHash = window.location.href;
       this.Check;
       var that = this;
@@ -63,7 +63,7 @@ firePhantom = (AID) => {
       this.Check = setInterval(detect, 100);
   };
   if (!window.flag) {
-      var hashDetection = new hashHandler();
+      var hashDetection = new hashHandler(AID);
   };
 }
 
