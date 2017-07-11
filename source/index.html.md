@@ -20,7 +20,6 @@ includes:
   - cartSku
   - conversionVariable
   - conversionBlock
-  - phantomPixel
 
 search: true
 ---
