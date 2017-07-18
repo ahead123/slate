@@ -94,3 +94,52 @@ mapImageFromMeta = () => { let image = null; let isProductPage = false; let aA =
 Parameter | Default | Description
 --------- | ------- | -----------
 none | meta | defaulted to use the meta tag with og:image i.e. <code>```<meta property="og:image" content="imageUrl" />```</code> element.
+
+## mapImageByCurrency
+
+```javascript
+Put your Javascript code between the 3 tick marks and reference which language you are using.
+
+mapImageByCurrency = (imageSelector = null, priceSelector = null, currencySymbol = null) => {
+    let imageSrc = document.querySelector(imageSelector);
+    let priceMapping = document.querySelector(priceSelector);
+    let currency = currencySymbol, image = null,price;
+    if(imageSrc != null && priceSelector != null && currency != null) {
+        price = priceMapping.textContent.trim();
+        if(price.indexOf(currency)>-1){
+            image = imageSrc.src;
+        };
+    }
+    return image;
+};
+mapImageByCurrency("imageSelector","priceSelector","currencySymbol");
+
+// Function Invoking Example - 
+Provide an example of how the function would look invoked with selectors.
+
+i.e - mapCategory("#crumb > span > a");
+
+// Provide an example of how the mapping should look in the pixel - 
+i.e - shpi: "http://lsco.scene7.com/is/image/lsco/Levi/clothing/005054886-front-pdp.jpg?$2500x2000$&id=RvLrs0&fmt=jpg&fit=constrain,1&wid=813&hei=650"
+
+```
+***** Please provide a detailed explanation about the mapping and what "type" it takes to function.
+
+i.e - The mapImageByCurrency function expects 2 CSS selectors. The first selector has to be an "imageSelector", the second selector has to be a "priceSelector" and the third has to be a "currencySymbol" THIS IS NOT A SELECTOR. You enter the desired currency you want shown on the site.
+This mapping takes in 3 arguments and compares the currency symbol you have specified with the currency symbol that is in the price mapping. If they both match, the image mapping is returned. If not the image mapping is null and will not be pulled in.
+
+> Creates a bold block for reference - i.e - Copy the code block below to use in pixel dashboard
+
+```javascript
+"Place the unspaced version of your code here" - 
+i.e - 
+mapImageByCurrency = (imageSelector = null, priceSelector = null, currencySymbol = null) => { let imageSrc = document.querySelector(imageSelector); let priceMapping = document.querySelector(priceSelector); let currency = currencySymbol, image = null,price; if(imageSrc != null && priceSelector != null && currency != null) { price = priceMapping.textContent.trim(); if(price.indexOf(currency)>-1){ image = imageSrc.src; }; } return image; }; mapImageByCurrency("imageSelector","priceSelector","currencySymbol");
+```
+
+### Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+imageSelector   | Only one CSS selector in string format | A css path to an html element containing text i.e. (name element)
+priceSelector   | Only one CSS selector in string format | A css path to an html element containing text i.e. (name element)
+currencySymbol   | Manually enter desired currency symbol | You have to manually enter the desired currency symbol in string format i.e. ("$")
