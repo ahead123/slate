@@ -51,6 +51,7 @@ cssPath | one css path | single css path(s) to an html elements on cart page, co
 ```javascript
 
 mapMobileDesktopCartSku = (mobileUrlTerm = null, mobilePath = null, desktopPath = null) => {
+<<<<<<< HEAD
     let cart_sku = "";
     let aA = null;
     let isMobile = false;
@@ -98,15 +99,62 @@ The SteelHouse(SH) tracking pixel also fires a SH Facebook(FB) pixel and a commo
 
 The mapMobileDesktopCartSku function will remove all special characters and whitespace preventing this error from triggering in the SH FB pixel.
 
+    let cart_sku = "",
+        aA = null,
+        isMobile = false,
+        url = window.location.href,
+        r = /[,A-Za-z0-9]+/g;
+    if (mobileUrlTerm && url.indexOf(mobileUrlTerm) > -1) {
+        isMobile = true;
+        aA = document.querySelectorAll(mobilePath);
+    } else {
+        aA = document.querySelectorAll(desktopPath);
+    }
+    for (let i = 0; i < aA.length; i++) {
+        if (isMobile) {
+            cart_sku += "," + aA[i].textContent.toLowerCase().trim() + "MOBILE"
+        } else {
+            cart_sku += "," + aA[i].textContent.toLowerCase().trim() + "DESKTOP"
+        }
+
+    }
+    if (cart_sku != "") {
+        cart_sku = cart_sku.substring(1, cart_sku.length).match(r).join("")
+    }
+
+
+    return cart_sku;
+}
+
+mapMobileDesktopCartSku("Enter mobileUrlTerm", "Enter mobilePath", "Enter desktopPath")
+
+//example
+mapMobileDesktopCartSku("m.something","div > span > a.cart_product_id","span > a.cart-product-id");
+
+shcp: "greenshoesDESKTOP,blueshoesDESKTOP,proteinpowderDESKTOP,horweenbeltDESKTOP"
+
+or
+
+shcp: "greenshoesMOBILE,blueshoesMOBILE,proteinpowderMOBILE,horweenbeltMOBILE"
+
+```
+
+The mapMobileDesktopCartSku function expects a a mobile identifier from the mobile site URL, and a mobile CSS path, and a desktop CSS path.
+The mapMobileDesktopCartSku function returns a comma separated string of cart skus with either MOBILE or DESKTOP appended to each sku depending on the verison of the site.
+
+The SteelHouse(SH) tracking pixel also fires a SH Facebook(FB) pixel and a common issue that occurs is special characters in the sku mapping are not properly escaped which cause syntax errors to fire in the SH FB pixel.
+
+The mapMobileDesktopCartSku funciton will remove all special characters and whitespace preventing this error from triggering in the SH FB pixel.
+
 > copy the code block below to use in pixel dashboard
 
 ```javascript
-mapMobileDesktopCartSku = (mobileUrlTerm = null, mobilePath = null, desktopPath = null) => { let cart_sku = ""; let aA = null; let isMobile = false; let url = window.location.href; let r = /[,A-Za-z]+/g; checkVersion = false; if (mobileUrlTerm) { checkVersion = true } if (mobileUrlTerm && url.indexOf(mobileUrlTerm) > -1) { isMobile = true; aA = document.querySelectorAll(mobilePath); for (let i = 0; i < aA.length; i++) { cart_sku += "," + aA[i].textContent.toLowerCase().split("-")[0].trim() + "MOBILE"; } } else { aA = document.querySelectorAll(desktopPath); for (let i = 0; i < aA.length; i++) { cart_sku += "," + aA[i].textContent.toLowerCase().trim() + "DESKTOP"; } } cart_sku = cart_sku.substring(1, cart_sku.length); if (isMobile) { cart_sku = cart_sku; } else if (checkVersion && !isMobile) { cart_sku = cart_sku; } else { cart_sku = cart_sku; } return cart_sku.match(r).join(""); }; mapMobileDesktopCartSku("mobile url", "mobile CSS path", "desktop CSS path");
+mapMobileDesktopCartSku = (mobileUrlTerm = null, mobilePath = null, desktopPath = null) => { let cart_sku = "", aA = null, isMobile = false, url = window.location.href, r = /[,A-Za-z0-9]+/g; if (mobileUrlTerm && url.indexOf(mobileUrlTerm) > -1) { isMobile = true; aA = document.querySelectorAll(mobilePath); } else { aA = document.querySelectorAll(desktopPath); } for (let i = 0; i < aA.length; i++) { if (isMobile) { cart_sku += "," + aA[i].textContent.toLowerCase().trim() + "MOBILE" } else { cart_sku += "," + aA[i].textContent.toLowerCase().trim() + "DESKTOP" } } if (cart_sku != "") { cart_sku = cart_sku.substring(1, cart_sku.length).match(r).join("") } return cart_sku; } mapMobileDesktopCartSku("Enter mobileUrlTerm", "Enter mobilePath", "Enter desktopPath")
 ```
 ### Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
-Mobile Url | null    | Enter the mobile url in the first parameter. - i.e So for "m.mywebsite.com", you would enter - "m.mywebsite".
-Mobile Selector  | null | One mobile html element containing some sku vlaue - i.e. a <code>```<span class="product_sku">```</code> element.
-Desktop Selector | null | One desktop html element containing some sku vlaue i.e. a <code>```<span class="product_sku">```</code> element.
+mobileUrlTerm | null | a term from the URL that identifies the mobile site - i.e. "m.some-site" or "somesite.com/mobile/"
+mobilePath | null | single css path(s) to an html elements on cart page, containing some sku value i.e. a <code>```<tr class="product_id">```</code> element.
+desktopPath | null | single css path(s) to an html elements on cart page, containing some sku value i.e. a <code>```<tr class="product_id">```</code> element.
