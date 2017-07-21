@@ -21,6 +21,7 @@ includes:
   - conversionVariable
   - conversionBlock
   - phantomPixel
+  - onClickPixel
 
 search: true
 ---
